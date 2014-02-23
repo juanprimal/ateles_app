@@ -7,7 +7,9 @@ gem 'rails', '4.0.0'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
-gem 'haml-rails'
+#html engine
+gem "haml", "~> 4.0.3"
+gem "haml-rails", "~> 0.4"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -17,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'compass-rails'
+
+gem "rails_12factor"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
