@@ -1,21 +1,15 @@
 %h1 Chistes
 
-%table
-  %tr
-    %th Autor
-    %th Chiste
-    %th
-    %th
-    %th
+- @flyers.each do |flyer|
+  .panel.panel-default
+    .panel-heading
+      %h3.panel-title= flyer.name
+    .panel-body
+      = flyer.description
 
-  - @flyers.each do |flyer|
-    %tr
-      %td= flyer.name
-      %td= flyer.description
-      %td= link_to 'Show', flyer
-      %td= link_to 'Edit', edit_flyer_path(flyer)
-      %td= link_to 'Destroy', flyer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+//%td= link_to 'Show', flyer
+//%td= link_to 'Edit', edit_flyer_path(flyer)
+//= link_to 'Destroy', flyer, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
 
-= link_to 'Nuevo Chiste', new_flyer_path
+= link_to 'Nuevo Chiste', new_flyer_path, class: 'btn btn-info'
