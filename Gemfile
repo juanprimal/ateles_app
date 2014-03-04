@@ -7,6 +7,9 @@ gem 'rails', '4.0.0'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 
+#devise
+gem "devise", "~> 3.0.3"
+
 #html engine
 gem "haml", "~> 4.0.3"
 gem "haml-rails", "~> 0.4"
