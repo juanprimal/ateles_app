@@ -6,7 +6,7 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :first_name, :last_name, :position, :phone
+  validates_presence_of :first_name, :last_name
   validates :tos, acceptance: true
 
   ## Database authenticatable
