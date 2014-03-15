@@ -1,5 +1,17 @@
 %h1 Nuevo Chiste
 
-= render 'form'
+- if user_signed_in?
+  = render 'form'
+- else
+  %p
+    para publicar un chiste debe estar registrado
+  %p
+    si ya se registro,
+    = link_to('Inicie Sesion', new_user_session_path)
+  %p
+    Si aun no se ha registrado,
+    = link_to('Registrese Aquí', new_user_registration_path)
+
+
 
 = link_to '< Volver', flyers_path
